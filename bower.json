@@ -1,0 +1,13 @@
+{
+  "name": "resume",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.11.0",
+    "normalize-css": "~3.0.0",
+    "mrmrs-colors": "~0.2.0",
+    "compass-mixins": "~1.0.0",
+    "fancybox": "~2.1.5"
+  },
+  "devDependencies": {}
+}

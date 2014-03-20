@@ -1,0 +1,301 @@
+// bower:scss
+@import "../bower_components/compass-mixins/lib/_compass.scss";
+@import "../bower_components/mrmrs-colors/sass/colors.scss";
+// endbower
+
+html {
+  -webkit-font-smoothing: antialiased;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #444;
+  background: url("../images/main_bg.png") repeat 0 0 #f3f3f3;
+  // background: url("../images/wallpaper.png") repeat 0 0 #f3f3f3;
+  // background: url("../images/bg.png") no-repeat top center fixed #fff;
+}
+
+#masthead {
+  margin-top: 40px;
+  text-align: center;
+
+  h1 {
+    @include border-radius(50%, 50%);
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    height: 120px;
+    width: 120px;
+    background: url("../images/avatar.jpg") no-repeat center center transparent;
+    background-size: cover;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3) inset;
+    text-indent: 100%;
+    white-space: nowrap;
+    font-size: 0;
+  }
+
+  .description {
+    background-color: #000;
+    padding: 5px 17px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border-left: 3px solid $red;
+    border-right: 3px solid $blue;
+  }
+}
+
+.wrapper {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 40px 60px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  position: relative;
+
+  #content {
+    border-left: 2px solid #eee;
+    padding: 15px 0 15px 15px;
+    margin: 0 0 20px 20px;
+  }
+
+  .entry-info {
+    display: none;
+  }
+
+  .entry {
+    padding: 10px 0;
+    position: relative;
+
+    &:before {
+      content: '\e814';
+      font-family: "resume-font";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+      position: absolute;
+      top: 7px;
+      left: -22px;
+      font-size: 24px;
+      color: $gray;
+      display: block;
+      background-color: #fff;
+      line-height: 24px;
+    }
+
+    .icon-title {
+      position: absolute;
+      font-size: 32px;
+      top: -4px;
+      left: -80px;
+      color: $gray;
+    }
+
+    .entry-title {
+      color: $black;
+      font-size: 18px;
+      font-weight: normal;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-top: 0;
+      padding-left: 10px;
+    }
+
+    .sub-title {
+      color: $gray;
+      font-size: 13px;
+      padding-left: 5px;
+    }
+
+    .entry-list {
+      margin: 30px 0;
+      padding-left: 10px;
+      list-style: none;
+    }
+
+    p {
+      color: #555;
+      margin: 10px 0 10px 0;
+      line-height: 1.8;
+      font-size: 13px;
+    }
+
+    .entry-item {
+      // @include single-transition(all, ease, 300ms);
+      position: relative;
+      cursor: pointer;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+
+      &:before {
+        @include single-transition(all, ease, 300ms);
+        content: '\e805';
+        font-family: "resume-font";
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        position: absolute;
+        top: 2px;
+        left: -33px;
+        font-size: 16px;
+        color: $gray;
+        display: block;
+        background-color: #fff;
+        line-height: 16px;
+      }
+
+      .entry-test-title {
+        font-size: 10px;
+      }
+
+      .entry-item-title {
+        color: #111;
+        font-weight: normal;
+        margin: 10px 0 5px;
+        font-size: 16px;
+      }
+      
+      .position-title {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .date-title {
+        color: $gray;
+        font-size: 12px;
+      }
+
+      &:hover {
+
+        .entry-item-title {
+          color: $blue;
+        }
+
+        &:before {
+          content: '\e80a';
+          color: $blue;
+        }
+
+        p {
+          color: #333;
+        }
+      }
+    }
+  }
+
+  .entry-bio {
+    margin: 30px auto;
+    padding: 30px 35px;
+    background: #fbfbfb;
+    border: 1px solid #f3f3f3;
+    border-radius: 8px;
+    position: relative;
+    border-width: 0 1px 1px;
+    border-color: #fff #f3f3f3 #e8e8e8;
+    line-height: 1.6em;
+  }
+
+  .gallery {
+    padding: 0 0 0 10px;
+    list-style: none;
+    font-size: 0;
+    /* webkit: collapse white-space between units */
+    letter-spacing: -0.31em;
+    /* reset IE < 8 */
+    *letter-spacing: normal;
+    /* IE < 8 && gecko: collapse white-space between units */
+    word-spacing: -0.43em;
+
+    .gallery-item {
+      letter-spacing: normal;
+      word-spacing: normal;
+      vertical-align: top;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      margin: 0 15px 15px 0;
+
+      a {
+        position: relative;
+        padding: 3px;
+        border: 1px solid $silver;
+        display: block;
+        line-height: 0;
+        text-decoration: none;
+
+        &:after {
+          @include single-transition(all, ease, 300ms);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: transparent;
+          content: '\e80c';
+          font-family: "resume-font";
+          font-style: normal;
+          font-weight: normal;
+          speak: none;
+          line-height: 135px;
+          text-align: center;
+          color: #fff;
+          font-size: 32px;
+          display: block;
+          visibility: hidden;
+        }
+
+        &:hover {
+          &:after {
+            visibility: visible;
+            background-color: rgba(0, 0, 0, 0.2);
+            font-size: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  .entry-awards .entry-item {
+    
+    &:before {
+      top: 0;
+    }
+
+    .entry-item-title {
+      font-size: 14px !important;      
+    }
+  }
+}
+
+#download {
+  text-align: center;
+
+  .download {
+    font-size: 18px;
+    text-decoration: none;
+    color: $gray;
+    border-bottom: 1px dotted #ddd;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+#mastfoot {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #aaa;
+  margin: 20px auto 60px;
+  text-shadow: 1px 1px 1px #fff;
+}
