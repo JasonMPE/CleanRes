@@ -14,3 +14,12 @@ message = [
 ]
 
 console.log message.join '\n'
+
+hm = document.createElement 'script'
+hm.src = '//hm.baidu.com/hm.js?d492a9f8f47bf8ab6929f55dd78c7da7'
+s = document.getElementsByTagName('script')[0]
+s.parentNode.insertBefore hm, s
+
+# 统计下载简历次数
+$('#js-download').click ()->
+  _hmt.push [ '_trackEvent', 'download', 'resume', $(this).attr 'href' ]
