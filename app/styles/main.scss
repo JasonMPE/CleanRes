@@ -231,6 +231,11 @@ body {
         line-height: 0;
         text-decoration: none;
 
+        img {
+          height: 135px;
+          width: 180px;
+        }
+
         &:after {
           @include single-transition(all, ease, 300ms);
           position: absolute;
@@ -298,4 +303,38 @@ body {
   color: #aaa;
   margin: 20px auto 60px;
   text-shadow: 1px 1px 1px #fff;
+}
+
+// 针对 iPad 等平板进行优化
+@media (min-width: 768px) and (max-width: 979px) { 
+  .wrapper .gallery .gallery-item a {
+    
+    &:after {
+      display: none;
+    }
+
+    img {
+      width: 100px;
+      height: 75px;
+    }
+  }
+}
+
+// 针对 iPhone 等手机进行优化
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 20px 10px 40px 0;
+  }
+  
+  .wrapper .gallery .gallery-item a {
+    
+    &:after {
+      display: none;
+    }
+
+    img {
+      width: 100px;
+      height: 75px;
+    }
+  }
 }
