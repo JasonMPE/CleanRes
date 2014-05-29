@@ -14,8 +14,10 @@ body {
   line-height: 1.4;
   color: #444;
   background: url("../images/main_bg.png") repeat 0 0 #f3f3f3;
-  // background: url("../images/wallpaper.png") repeat 0 0 #f3f3f3;
-  // background: url("../images/bg.png") no-repeat top center fixed #fff;
+  background-image: -webkit-image-set(
+    url("../images/main_bg.png") 1x,
+    url("../images/main_bg@2x.png") 2x
+  );
 }
 
 #masthead {
@@ -30,6 +32,10 @@ body {
     height: 120px;
     width: 120px;
     background: url("../images/avatar.jpg") no-repeat center center transparent;
+    background-image: -webkit-image-set(
+      url("../images/avatar.jpg") 1x,
+      url("../images/avatar@2x.jpg") 2x
+    );
     background-size: cover;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.3) inset;
     text-indent: 100%;
@@ -162,7 +168,7 @@ body {
         margin: 10px 0 5px;
         font-size: 16px;
       }
-      
+
       .position-title {
         font-size: 14px;
         color: #666;
@@ -269,13 +275,13 @@ body {
   }
 
   .entry-awards .entry-item {
-    
+
     &:before {
       top: 0;
     }
 
     .entry-item-title {
-      font-size: 14px !important;      
+      font-size: 14px !important;
     }
   }
 }
@@ -306,9 +312,9 @@ body {
 }
 
 // 针对 iPad 等平板进行优化
-@media (min-width: 768px) and (max-width: 979px) { 
+@media (min-width: 768px) and (max-width: 979px) {
   .wrapper .gallery .gallery-item a {
-    
+
     &:after {
       display: none;
     }
@@ -325,9 +331,9 @@ body {
   .wrapper {
     padding: 20px 10px 40px 0;
   }
-  
+
   .wrapper .gallery .gallery-item a {
-    
+
     &:after {
       display: none;
     }
